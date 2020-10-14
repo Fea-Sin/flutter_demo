@@ -68,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListPage([
-        PageInfo('test', (ctx) => TestRoute())
+        PageInfo('test', (ctx) => TestRoute()),
+        PageInfo('ListView', (ctx) => ListViewRoute()),
       ]),
     );
   }
