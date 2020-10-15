@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListPage([
         PageInfo('test', (ctx) => TestRoute()),
         PageInfo('ListView', (ctx) => ListViewRoute()),
+        PageInfo('CustomListView', (ctx) => CustomListViewRoute())
       ]),
     );
   }
