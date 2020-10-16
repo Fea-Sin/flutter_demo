@@ -72,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('test', (ctx) => TestRoute()),
         PageInfo('ListView', (ctx) => ListViewRoute()),
         PageInfo('CustomListView', (ctx) => CustomListViewRoute()),
-        PageInfo('oneState', (ctx) => OneStateRoute())
+        PageInfo('oneState', (ctx) => OneStateRoute()),
+        PageInfo('turn_box', (ctx) => TurnBoxRoute()),
       ]),
     );
   }
