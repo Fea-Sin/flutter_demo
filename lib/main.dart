@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/routes/oneState.dart';
 import 'widgets/index.dart';
 import 'routes/index.dart';
 
@@ -70,7 +71,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListPage([
         PageInfo('test', (ctx) => TestRoute()),
         PageInfo('ListView', (ctx) => ListViewRoute()),
-        PageInfo('CustomListView', (ctx) => CustomListViewRoute())
+        PageInfo('CustomListView', (ctx) => CustomListViewRoute()),
+        PageInfo('oneState', (ctx) => OneStateRoute())
       ]),
     );
   }
