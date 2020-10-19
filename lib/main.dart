@@ -74,6 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('CustomListView', (ctx) => CustomListViewRoute()),
         PageInfo('oneState', (ctx) => OneStateRoute()),
         PageInfo('turn_box', (ctx) => TurnBoxRoute()),
+        PageInfo('基本动画', (ctx) => AnimationBaseRoute()),
+        PageInfo('Stack', (ctx) => StackRoute()),
+        PageInfo('animatedBuilder', (ctx) => AnimatedBuilderRoute()),
+        PageInfo('上滑刷新', (ctx) => PullRefreshRoute()),
       ]),
     );
   }
