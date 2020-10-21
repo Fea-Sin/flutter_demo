@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/routes/oneState.dart';
 import 'widgets/index.dart';
 import 'routes/index.dart';
 
@@ -78,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('Stack', (ctx) => StackRoute()),
         PageInfo('animatedBuilder', (ctx) => AnimatedBuilderRoute()),
         PageInfo('上滑刷新', (ctx) => PullRefreshRoute()),
+        PageInfo('Loading', (ctx) => LoadingRoute()),
+        PageInfo('FkIconfont', (ctx) => FkIconfontRoute()),
       ]),
     );
   }

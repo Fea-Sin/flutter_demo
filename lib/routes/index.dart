@@ -7,3 +7,5 @@ export 'animationController.dart';
 export 'stack.dart';
 export 'animatedBuilder.dart';
 export 'pull_refresh/pull_refresh.dart';
+export 'loading.dart';
+export 'fkIconfont.dart';
