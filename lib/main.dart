@@ -79,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('上滑刷新', (ctx) => PullRefreshRoute()),
         PageInfo('Loading', (ctx) => LoadingRoute()),
         PageInfo('FkIconfont', (ctx) => FkIconfontRoute()),
+        PageInfo('Navigator', (ctx) => NavigatorRoute()),
       ]),
     );
   }
