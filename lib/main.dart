@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/index.dart';
 import 'routes/index.dart';
+import './core/utils/toast.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ToastUtils.init(MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Widgets Demo'),
-    );
+    ));
   }
 }
 
@@ -80,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('Loading', (ctx) => LoadingRoute()),
         PageInfo('FkIconfont', (ctx) => FkIconfontRoute()),
         PageInfo('Navigator', (ctx) => NavigatorRoute()),
+        PageInfo('Toast', (ctx) => ToastRoute()),
       ]),
     );
   }
