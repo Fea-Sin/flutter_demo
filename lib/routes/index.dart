@@ -11,3 +11,5 @@ export 'loading.dart';
 export 'fkIconfont.dart';
 export 'navigator.dart';
 export 'toast.dart';
+export 'method_test.dart';
+export 'wrapper_data.dart';

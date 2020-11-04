@@ -82,6 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('FkIconfont', (ctx) => FkIconfontRoute()),
         PageInfo('Navigator', (ctx) => NavigatorRoute()),
         PageInfo('Toast', (ctx) => ToastRoute()),
+        PageInfo('声明周期方法', (ctx) => MethodRoute()),
+        PageInfo('构建轮播图',(ctx) => WrapperRoute()),
       ]),
     );
   }

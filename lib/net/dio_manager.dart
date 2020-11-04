@@ -16,6 +16,7 @@ Dio get dio => _dio;
 /// dio 配置
 class DioManager {
   static Future init() async {
+    print('Dio 配置====');
     dio.options.baseUrl = Apis.BASE_HOST;
     dio.options.connectTimeout = 30 * 1000;
     dio.options.sendTimeout = 30 * 1000;
