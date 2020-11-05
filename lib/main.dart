@@ -2,13 +2,32 @@ import 'package:flutter/material.dart';
 import 'widgets/index.dart';
 import 'routes/index.dart';
 import './core/utils/toast.dart';
+import 'net/index.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+
+  @override
+  void initState() {
+    super.initState();
+    print('FLUTTER DEMO INIT');
+    _initAsync();
+  }
+
+  void _initAsync() async {
+    await DioManager.init();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ToastUtils.init(MaterialApp(
@@ -33,6 +52,45 @@ class MyApp extends StatelessWidget {
     ));
   }
 }
+
+
+//class MyApp extends StatelessWidget {
+//
+//  @override
+//  void initState() {
+//    print('FLUTTER DEMO INIT');
+//    _initAsync();
+//  }
+//
+//  void _initAsync() async {
+//    await DioManager.init();
+//  }
+//
+//  // This widget is the root of your application.
+//  @override
+//  Widget build(BuildContext context) {
+//    return ToastUtils.init(MaterialApp(
+//      title: 'Flutter Demo',
+//      theme: ThemeData(
+//        // This is the theme of your application.
+//        //
+//        // Try running your application with "flutter run". You'll see the
+//        // application has a blue toolbar. Then, without quitting the app, try
+//        // changing the primarySwatch below to Colors.green and then invoke
+//        // "hot reload" (press "r" in the console where you ran "flutter run",
+//        // or simply save your changes to "hot reload" in a Flutter IDE).
+//        // Notice that the counter didn't reset back to zero; the application
+//        // is not restarted.
+//        primarySwatch: Colors.blue,
+//        // This makes the visual density adapt to the platform that you run
+//        // the app on. For desktop platforms, the controls will be smaller and
+//        // closer together (more dense) than on mobile platforms.
+//        visualDensity: VisualDensity.adaptivePlatformDensity,
+//      ),
+//      home: MyHomePage(title: 'Widgets Demo'),
+//    ));
+//  }
+//}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -83,7 +141,8 @@ class _MyHomePageState extends State<MyHomePage> {
         PageInfo('Navigator', (ctx) => NavigatorRoute()),
         PageInfo('Toast', (ctx) => ToastRoute()),
         PageInfo('声明周期方法', (ctx) => MethodRoute()),
-        PageInfo('构建轮播图',(ctx) => WrapperRoute()),
+        PageInfo('请求一个数据',(ctx) => WrapperRoute()),
+        PageInfo('spinkit loading', (ctx) => SpinkitRoute()),
       ]),
     );
   }

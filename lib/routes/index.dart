@@ -13,3 +13,4 @@ export 'navigator.dart';
 export 'toast.dart';
 export 'method_test.dart';
 export 'wrapper_data.dart';
+export 'spinkit.dart';

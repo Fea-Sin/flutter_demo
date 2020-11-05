@@ -9,7 +9,6 @@ class BannerModel {
     if (json['data'] != null) {
       data = new List<BannerBean>();
       json['data'].forEach((v) {
-        print('返回数据的每一条数据----${v}');
         data.add(new BannerBean.fromJson(v));
       });
     }

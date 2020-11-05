@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+
 import '../../common/common.dart';
 import '../../utils/index.dart';
 
@@ -46,6 +47,10 @@ class LogInteceptors extends InterceptorsWrapper {
         stringBuffer.write('\n $name: $values');
       });
       stringBuffer.clear();
+
+      if (response != null) {
+        printKV('response', response);
+      }
       print('└—————————————————————End Response———————————————————————\n\n');
     }
     return response;
